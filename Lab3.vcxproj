@@ -125,12 +125,16 @@
   <ItemGroup>
     <ClCompile Include="Highlander.cpp" />
     <ClCompile Include="Lab3Main.cpp" />
+    <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="SuperIntArray.cpp" />
+    <ClCompile Include="Term.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Highlander.h" />
+    <ClInclude Include="Polynomial.h" />
     <ClInclude Include="SuperIntArray.h" />
+    <ClInclude Include="Term.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

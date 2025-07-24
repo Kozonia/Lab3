@@ -1,6 +1,8 @@
 #include "Highlander.h"
 #include "SuperIntArray.h"
 #include "Time.h"
+#include "Term.h"
+#include "Polynomial.h"
 #include <iostream>
 using namespace std;
 
@@ -17,7 +19,8 @@ void testTimeExtractionOperator();
 void testTimeIntegerConversion();
 
 //Third Mini Lab Testers
-
+void testTerm();
+void testPoly();
 
 int main()
 {
@@ -34,7 +37,8 @@ int main()
 	testTimeIntegerConversion();
 
 	//Third Mini Lab Testers
-
+	testTerm();
+	testPoly();
 
 
 
@@ -176,5 +180,27 @@ void testTimeExtractionOperator()
 void testTimeIntegerConversion()
 {
 	Time MyTime(6, 15, 30, 20);
-	cout << MyTime.timeInSeconds();
+	cout << MyTime.timeInSeconds() << endl << endl;
+}
+
+void testTerm()
+{
+	Term Term1(2, 3, 'x');
+	Term Term2(4, 3, 'x');
+
+	cout << Term1.getCoefficient() << Term1.getVariable() << "^" << Term1.getExponent() << endl;
+	cout << Term2.getCoefficient() << Term2.getVariable() << "^" << Term2.getExponent() << endl;
+
+	cout << boolalpha;
+	cout << "Is Term1 <= Term2: " << (Term1 <= Term2) << endl;
+	cout << "Is Term1 >= Term2: " << (Term1 >= Term2) << endl;
+	cout << "Is Term1 < Term2: " << (Term1 < Term2) << endl;
+	cout << "Is Term1 > Term2: " << (Term1 > Term2) << endl;
+	cout << "Is Term1 == Term2: " << (Term1 <= Term2) << endl;
+	cout << "Is Term1 compatible to combine with Term2: " << Term1.compatible(Term2) << endl;
+}
+
+void testPoly()
+{
+
 }
